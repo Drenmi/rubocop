@@ -31,7 +31,7 @@ module RuboCop
         extend AutoCorrector
         include RangeHelp
 
-        MSG = 'Avoid leaving a trailing comma in attribute declarations.'
+        MSG = 'Do not use trailing comma in attribute declarations.'
 
         def on_send(node)
           return unless node.attribute_accessor? && node.arguments.last.def_type?
